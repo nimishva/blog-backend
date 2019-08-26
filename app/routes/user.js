@@ -73,7 +73,7 @@ module.exports.setRouter = (app) => {
     */
 
     // auth token params: userId.
-    app.get(`${baseUrl}/getAll`,isAuth.isAuthorized,userController.fetchAllUsers);
+    app.get(`${baseUrl}/getAll`,userController.fetchAllUsers);
 
     app.post(`${baseUrl}/verifyTokens`,userController.verifyTokens);
 
